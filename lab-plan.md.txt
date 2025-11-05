@@ -14,3 +14,22 @@ This file documents each phase of the AWS IAM home lab.
 - Created a custom S3 List-Only policy
 - Tested least privilege with S3 access
 - Confirmed AdminUser has full access
+
+## Phase 3 – Roles, Policies & Access Control Testing
+**Objective:** Learn how IAM roles enable secure service-to-service access between EC2 and S3 while applying the principle of least privilege.
+
+### What Was Done
+- Created IAM role `EC2S3ReadOnlyRole` for EC2 → S3 access
+- Attached AWS-managed policy `AmazonS3ReadOnlyAccess`
+- Launched EC2 instance with role attached
+- Tested read-only access (received AccessDenied on upload)
+- Created custom policy `S3ReadWriteSpecificBucket` for targeted bucket access
+- Attached custom policy to the role and retested (upload succeeded)
+
+### Why It Matters
+- Demonstrates how AWS Roles provide temporary, secure credentials
+- Reinforces least privilege access control
+- Shows how to validate and troubleshoot permissions using AWS CLI
+- Replicates real-world cloud security workflow
+
+### Screenshots added to phase 3 folder
