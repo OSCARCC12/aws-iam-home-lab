@@ -1,0 +1,16 @@
+# AWS IAM Home Lab – Progress Tracker
+
+This file documents each phase of the AWS IAM home lab.
+
+## Phase 1 – Environment Setup
+- Created AWS Free Tier account
+- Secured root account with MFA
+- Configured password policy
+
+## Phase 2 – IAM Fundamentals
+- Created AdminUser, DevUser, and AuditUser
+- Created groups (Developers, Auditors)
+- Attached permissions using AWS managed policies
+- Created a custom S3 List-Only policy
+- Tested least privilege with S3 access
+- Confirmed AdminUser has full access
